@@ -1,0 +1,59 @@
+
+/**
+ * Editor Styles for VitaPro Clinic
+ * ================================
+ * Estilos para o editor de blocos no painel administrativo
+ */
+
+/* Importa as variáveis do main.css */
+@import url('main.css');
+
+/* Sobrescreve estilos específicos do editor */
+.editor-styles-wrapper {
+  font-family: var(--wp--preset--font-family--inter);
+  font-size: var(--wp--preset--font-size--medium);
+  line-height: 1.7;
+  color: var(--wp--preset--color--dark);
+}
+
+.editor-styles-wrapper .wp-block {
+  max-width: 1200px;
+}
+
+.editor-styles-wrapper .wp-block[data-align="wide"] {
+  max-width: 1400px;
+}
+
+.editor-styles-wrapper .wp-block[data-align="full"] {
+  max-width: none;
+}
+
+/* Estilos para blocos no editor */
+.editor-styles-wrapper .vitapro-card {
+  background-color: var(--wp--preset--color--white);
+  border: 1px dashed var(--wp--preset--color--gray-light);
+  border-radius: var(--vitapro-border-radius-medium);
+  padding: 2rem;
+}
+
+.editor-styles-wrapper .vitapro-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--vitapro-border-radius-medium);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.editor-styles-wrapper .vitapro-btn--primary {
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--white);
+}
+
+.editor-styles-wrapper .vitapro-btn--secondary {
+  background-color: transparent;
+  color: var(--wp--preset--color--primary);
+  border: 2px solid var(--wp--preset--color--primary);
+}

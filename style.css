@@ -1,0 +1,22 @@
+
+<?php
+/**
+ * Theme Name: VitaPro Clinic
+ * Description: Tema WordPress FSE moderno e profissional para clínicas médicas e profissionais de saúde. Construído com foco em experiência do usuário, performance e acessibilidade.
+ * Version: 1.0.0
+ * Author: VitaPro Development Team
+ * Author URI: https://vitaproclinic.com
+ * Text Domain: vitapro-clinic
+ * Domain Path: /languages
+ * Requires at least: 6.0
+ * Tested up to: 6.4
+ * Requires PHP: 7.4
+ * License: GPL v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Tags: block-themes, full-site-editing, healthcare, medical, clinic, responsive, accessibility-ready
+ */
+
+/* Prevents direct access to the file */
+if (!defined('ABSPATH')) {
+    exit;
+}

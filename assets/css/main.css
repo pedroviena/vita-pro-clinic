@@ -1,0 +1,427 @@
+
+/**
+ * VitaPro Clinic Main Stylesheet
+ * ================================
+ * Este arquivo contém estilos customizados que não podem ser facilmente
+ * alcançados pelo theme.json, incluindo componentes específicos e ajustes finos.
+ */
+
+/* CSS Custom Properties (Variáveis) */
+:root {
+  /* Bordas e sombras */
+  --vitapro-border-radius-small: 4px;
+  --vitapro-border-radius-medium: 8px;
+  --vitapro-border-radius-large: 16px;
+  --vitapro-shadow-soft: 0 2px 10px rgba(45, 55, 72, 0.1);
+  --vitapro-shadow-medium: 0 4px 20px rgba(45, 55, 72, 0.15);
+  --vitapro-shadow-strong: 0 8px 30px rgba(45, 55, 72, 0.2);
+  
+  /* Transições */
+  --vitapro-transition-fast: 0.2s ease;
+  --vitapro-transition-medium: 0.3s ease;
+  --vitapro-transition-slow: 0.5s ease;
+  
+  /* Z-index */
+  --vitapro-z-header: 1000;
+  --vitapro-z-modal: 2000;
+  --vitapro-z-tooltip: 3000;
+}
+
+/* Reset e melhorias base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--wp--preset--font-family--inter);
+  line-height: 1.7;
+  color: var(--wp--preset--color--dark);
+  background-color: var(--wp--preset--color--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Melhorias de acessibilidade */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: var(--wp--preset--color--background-light);
+  border-radius: var(--vitapro-border-radius-small);
+  box-shadow: var(--vitapro-shadow-medium);
+  clip: auto !important;
+  color: var(--wp--preset--color--dark);
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: var(--vitapro-z-tooltip);
+}
+
+/* Skip link */
+.skip-link {
+  left: -9999px;
+  position: absolute;
+  top: -9999px;
+}
+
+.skip-link:focus {
+  display: block;
+  left: 6px;
+  top: 7px;
+  z-index: var(--vitapro-z-tooltip);
+}
+
+/* Componentes customizados */
+
+/* Card genérico */
+.vitapro-card {
+  background-color: var(--wp--preset--color--white);
+  border-radius: var(--vitapro-border-radius-medium);
+  box-shadow: var(--vitapro-shadow-soft);
+  padding: 2rem;
+  transition: box-shadow var(--vitapro-transition-medium);
+}
+
+.vitapro-card:hover {
+  box-shadow: var(--vitapro-shadow-medium);
+}
+
+/* Botões customizados */
+.vitapro-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--vitapro-border-radius-medium);
+  font-family: var(--wp--preset--font-family--inter);
+  font-weight: 500;
+  font-size: var(--wp--preset--font-size--medium);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--vitapro-transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.vitapro-btn--primary {
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--white);
+}
+
+.vitapro-btn--primary:hover {
+  background-color: var(--wp--preset--color--secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--vitapro-shadow-medium);
+}
+
+.vitapro-btn--secondary {
+  background-color: transparent;
+  color: var(--wp--preset--color--primary);
+  border: 2px solid var(--wp--preset--color--primary);
+}
+
+.vitapro-btn--secondary:hover {
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--white);
+}
+
+.vitapro-btn--success {
+  background-color: var(--wp--preset--color--success);
+  color: var(--wp--preset--color--white);
+}
+
+.vitapro-btn--large {
+  padding: 1rem 2rem;
+  font-size: var(--wp--preset--font-size--large);
+}
+
+.vitapro-btn--small {
+  padding: 0.5rem 1rem;
+  font-size: var(--wp--preset--font-size--small);
+}
+
+/* Grid de serviços */
+.vitapro-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.vitapro-service-item {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--wp--preset--color--white);
+  border-radius: var(--vitapro-border-radius-medium);
+  box-shadow: var(--vitapro-shadow-soft);
+  transition: transform var(--vitapro-transition-medium), box-shadow var(--vitapro-transition-medium);
+}
+
+.vitapro-service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--vitapro-shadow-medium);
+}
+
+.vitapro-service-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--wp--preset--color--primary), var(--wp--preset--color--secondary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vitapro-service-icon svg,
+.vitapro-service-icon img {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+/* Grid de profissionais */
+.vitapro-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.vitapro-team-member {
+  text-align: center;
+  background-color: var(--wp--preset--color--white);
+  border-radius: var(--vitapro-border-radius-medium);
+  overflow: hidden;
+  box-shadow: var(--vitapro-shadow-soft);
+  transition: transform var(--vitapro-transition-medium);
+}
+
+.vitapro-team-member:hover {
+  transform: translateY(-5px);
+}
+
+.vitapro-team-photo {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.vitapro-team-info {
+  padding: 1.5rem;
+}
+
+.vitapro-team-name {
+  font-family: var(--wp--preset--font-family--manrope);
+  font-size: var(--wp--preset--font-size--large);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--wp--preset--color--dark);
+}
+
+.vitapro-team-specialty {
+  color: var(--wp--preset--color--primary);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Depoimentos */
+.vitapro-testimonials {
+  background-color: var(--wp--preset--color--background-light);
+  padding: 4rem 0;
+}
+
+.vitapro-testimonial-item {
+  background-color: var(--wp--preset--color--white);
+  padding: 2rem;
+  border-radius: var(--vitapro-border-radius-medium);
+  box-shadow: var(--vitapro-shadow-soft);
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.vitapro-testimonial-item::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--wp--preset--color--primary);
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-family: serif;
+}
+
+.vitapro-testimonial-text {
+  font-style: italic;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.vitapro-testimonial-author {
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+}
+
+/* Seções especiais */
+.vitapro-hero {
+  background: linear-gradient(135deg, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--secondary) 100%);
+  color: var(--wp--preset--color--white);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.vitapro-hero h1 {
+  color: inherit;
+  margin-bottom: 1rem;
+}
+
+.vitapro-hero p {
+  font-size: var(--wp--preset--font-size--large);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Formulários */
+.vitapro-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.vitapro-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.vitapro-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--dark);
+}
+
+.vitapro-form-input,
+.vitapro-form-textarea,
+.vitapro-form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--wp--preset--color--gray-light);
+  border-radius: var(--vitapro-border-radius-small);
+  font-family: var(--wp--preset--font-family--inter);
+  font-size: var(--wp--preset--font-size--medium);
+  transition: border-color var(--vitapro-transition-fast);
+}
+
+.vitapro-form-input:focus,
+.vitapro-form-textarea:focus,
+.vitapro-form-select:focus {
+  outline: none;
+  border-color: var(--wp--preset--color--primary);
+  box-shadow: 0 0 0 3px rgba(58, 125, 188, 0.1);
+}
+
+.vitapro-form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Navegação e header */
+.vitapro-header {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: var(--vitapro-z-header);
+  box-shadow: var(--vitapro-shadow-soft);
+}
+
+.vitapro-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* Utilities */
+.vitapro-text-center { text-align: center; }
+.vitapro-text-left { text-align: left; }
+.vitapro-text-right { text-align: right; }
+
+.vitapro-mt-0 { margin-top: 0; }
+.vitapro-mt-1 { margin-top: 0.5rem; }
+.vitapro-mt-2 { margin-top: 1rem; }
+.vitapro-mt-3 { margin-top: 1.5rem; }
+.vitapro-mt-4 { margin-top: 2rem; }
+
+.vitapro-mb-0 { margin-bottom: 0; }
+.vitapro-mb-1 { margin-bottom: 0.5rem; }
+.vitapro-mb-2 { margin-bottom: 1rem; }
+.vitapro-mb-3 { margin-bottom: 1.5rem; }
+.vitapro-mb-4 { margin-bottom: 2rem; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vitapro-hero {
+    padding: 4rem 0;
+  }
+  
+  .vitapro-services-grid,
+  .vitapro-team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .vitapro-nav-toggle {
+    display: block;
+  }
+  
+  .vitapro-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vitapro-hero {
+    padding: 3rem 0;
+  }
+  
+  .vitapro-hero h1 {
+    font-size: var(--wp--preset--font-size--heading-2);
+  }
+  
+  .vitapro-card {
+    padding: 1rem;
+  }
+  
+  .vitapro-btn {
+    width: 100%;
+  }
+}
+
+/* Print styles */
+@media print {
+  .vitapro-header,
+  .vitapro-nav,
+  .vitapro-btn,
+  .vitapro-form {
+    display: none;
+  }
+  
+  .vitapro-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
+
+

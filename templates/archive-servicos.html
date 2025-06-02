@@ -1,0 +1,105 @@
+
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="margin-top:0;margin-bottom:0">
+    
+    <!-- Hero Section -->
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}}},"backgroundColor":"background-light","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group has-background-light-background-color has-background" style="padding-top:4rem;padding-bottom:4rem">
+        
+        <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontWeight":"700"}},"textColor":"dark","fontSize":"heading-1"} -->
+        <h1 class="wp-block-heading has-text-align-center has-dark-color has-text-color has-heading-1-font-size" style="font-weight:700">Nossos Serviços</h1>
+        <!-- /wp:heading -->
+        
+        <!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"1rem"}}},"textColor":"gray-medium","fontSize":"large"} -->
+        <p class="has-text-align-center has-gray-medium-color has-text-color has-large-font-size" style="margin-top:1rem">Oferecemos uma ampla gama de serviços médicos especializados com tecnologia de ponta e cuidado humanizado.</p>
+        <!-- /wp:paragraph -->
+        
+    </div>
+    <!-- /wp:group -->
+    
+    <!-- Services Content -->
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group" style="padding-top:4rem;padding-bottom:4rem">
+        
+        <!-- wp:query {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"servicos","order":"asc","orderBy":"menu_order","author":"","search":"","exclude":[],"sticky":"","inherit":true}} -->
+        <div class="wp-block-query">
+            <!-- wp:post-template {"style":{"spacing":{"blockGap":"2rem"}},"layout":{"type":"grid","columnCount":3}} -->
+                
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"border":{"radius":"12px"}},"backgroundColor":"white","className":"vitapro-service-item","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group vitapro-service-item has-white-background-color has-background" style="border-radius:12px;padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
+                    
+                    <!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"8px"}}} /-->
+                    
+                    <!-- wp:post-title {"textAlign":"center","isLink":true,"level":3,"style":{"typography":{"fontWeight":"600"},"spacing":{"margin":{"top":"1.5rem","bottom":"1rem"}}},"textColor":"dark","fontSize":"heading-3"} /-->
+                    
+                    <!-- wp:post-excerpt {"textAlign":"center","excerptLength":20,"style":{"spacing":{"margin":{"bottom":"1.5rem"}}},"textColor":"gray-medium"} /-->
+                    
+                    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+                    <div class="wp-block-buttons">
+                        <!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"6px"},"spacing":{"padding":{"left":"1.5rem","right":"1.5rem","top":"0.5rem","bottom":"0.5rem"}}}} -->
+                        <div class="wp-block-button">
+                            <a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:6px;padding-top:0.5rem;padding-right:1.5rem;padding-bottom:0.5rem;padding-left:1.5rem">Saiba Mais</a>
+                        </div>
+                        <!-- /wp:button -->
+                    </div>
+                    <!-- /wp:buttons -->
+                    
+                </div>
+                <!-- /wp:group -->
+                
+            <!-- /wp:post-template -->
+
+            <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"3rem"}}}} -->
+                <!-- wp:query-pagination-previous /-->
+                <!-- wp:query-pagination-numbers /-->
+                <!-- wp:query-pagination-next /-->
+            <!-- /wp:query-pagination -->
+
+            <!-- wp:query-no-results -->
+                <!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"3rem"}}},"textColor":"gray-medium"} -->
+                <p class="has-text-align-center has-gray-medium-color has-text-color" style="margin-top:3rem">Nenhum serviço encontrado.</p>
+                <!-- /wp:paragraph -->
+            <!-- /wp:query-no-results -->
+        </div>
+        <!-- /wp:query -->
+        
+    </div>
+    <!-- /wp:group -->
+    
+    <!-- CTA Section -->
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}}},"backgroundColor":"primary","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group has-primary-background-color has-background" style="padding-top:4rem;padding-bottom:4rem">
+        
+        <!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontWeight":"600"},"spacing":{"margin":{"bottom":"1.5rem"}}},"textColor":"white","fontSize":"heading-2"} -->
+        <h2 class="wp-block-heading has-text-align-center has-white-color has-text-color has-heading-2-font-size" style="font-weight:600;margin-bottom:1.5rem">Precisa de Mais Informações?</h2>
+        <!-- /wp:heading -->
+        
+        <!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"2rem"}}},"textColor":"white","fontSize":"large"} -->
+        <p class="has-text-align-center has-white-color has-text-color has-large-font-size" style="margin-bottom:2rem">Nossa equipe está pronta para esclarecer suas dúvidas e ajudar você a escolher o melhor tratamento.</p>
+        <!-- /wp:paragraph -->
+        
+        <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1rem"}}} -->
+        <div class="wp-block-buttons">
+            <!-- wp:button {"backgroundColor":"secondary","textColor":"white","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.75rem","bottom":"0.75rem"}}},"fontSize":"medium"} -->
+            <div class="wp-block-button has-custom-font-size has-medium-font-size">
+                <a class="wp-block-button__link has-white-color has-secondary-background-color has-text-color has-background wp-element-button" href="/agendamento" style="border-radius:8px;padding-top:0.75rem;padding-right:2rem;padding-bottom:0.75rem;padding-left:2rem">Agendar Consulta</a>
+            </div>
+            <!-- /wp:button -->
+            
+            <!-- wp:button {"backgroundColor":"white","textColor":"primary","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.75rem","bottom":"0.75rem"}}},"fontSize":"medium"} -->
+            <div class="wp-block-button has-custom-font-size has-medium-font-size">
+                <a class="wp-block-button__link has-primary-color has-white-background-color has-text-color has-background wp-element-button" href="/contato" style="border-radius:8px;padding-top:0.75rem;padding-right:2rem;padding-bottom:0.75rem;padding-left:2rem">Fale Conosco</a>
+            </div>
+            <!-- /wp:button -->
+        </div>
+        <!-- /wp:buttons -->
+        
+    </div>
+    <!-- /wp:group -->
+    
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"footer"} /-->
